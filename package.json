@@ -4,7 +4,7 @@
   "description": "Better decorators for Apollo and React (with no babel)",
   "author": "Nicolás López <nicolaslopezj@me.com>",
   "license": "MIT",
-  "main": "./src",
+  "main": "./lib",
   "scripts": {
     "build": "babel ./src --out-dir ./lib",
     "prepublish": "yarn run test && yarn run build",
