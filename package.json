@@ -1,27 +1,21 @@
 {
   "name": "react-apollo-decorators",
-  "version": "1.4.25",
-  "description": "Better decorators for Apollo and React",
+  "version": "1.4.26",
+  "description": "Better decorators for Apollo and React (no babel for react native)",
   "author": "Nicolás López <nicolaslopezj@me.com>",
   "license": "MIT",
-  "main": "./lib",
+  "main": "./src",
   "scripts": {
-    "build": "babel ./src --out-dir ./lib",
-    "prepublish": "yarn run test && yarn run build",
+    "prepublish": "yarn run test",
     "test": "jest",
     "lint": "standard \"src/**/*.js\"",
     "watch": "node watch.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicolaslopezj/react-apollo-decorators.git"
+    "url": "git+https://github.com/joadr/react-apollo-decorators.git"
   },
-  "keywords": [
-    "react",
-    "apollo",
-    "decorators",
-    "graphql"
-  ],
+  "keywords": ["react", "apollo", "decorators", "graphql"],
   "devDependencies": {
     "apollo-client": "^1.9.3",
     "babel-cli": "^6.26.0",
@@ -43,7 +37,6 @@
     "standard": "^10.0.3"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "underscore": "^1.8.3"
@@ -54,19 +47,10 @@
     "react-apollo": "^1.4.11"
   },
   "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/lib"
-    ]
+    "testPathIgnorePatterns": ["/node_modules/", "/lib"]
   },
   "standard": {
-    "globals": [
-      "it",
-      "xit",
-      "expect",
-      "test",
-      "jest"
-    ],
+    "globals": ["it", "xit", "expect", "test", "jest"],
     "parser": "babel-eslint"
   }
 }
