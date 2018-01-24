@@ -1,12 +1,13 @@
 {
   "name": "react-apollo-decorators",
-  "version": "1.4.26",
-  "description": "Better decorators for Apollo and React (no babel for react native)",
+  "version": "1.4.25",
+  "description": "Better decorators for Apollo and React (with no babel)",
   "author": "Nicolás López <nicolaslopezj@me.com>",
   "license": "MIT",
   "main": "./src",
   "scripts": {
-    "prepublish": "yarn run test",
+    "build": "babel ./src --out-dir ./lib",
+    "prepublish": "yarn run test && yarn run build",
     "test": "jest",
     "lint": "standard \"src/**/*.js\"",
     "watch": "node watch.js"
@@ -37,6 +38,7 @@
     "standard": "^10.0.3"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "underscore": "^1.8.3"
